@@ -5,6 +5,7 @@ node {
       git 'https://github.com/paulsoumi96/SpringMVC_DevOps201.git'
       mvn1 = tool 'MAVEN_HOME'
    }
+   
 stage ('Build') {
        sh "'${mvn1}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
