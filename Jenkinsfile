@@ -10,7 +10,7 @@ stage ('Build') {
        sh "'${mvn1}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
 
-stage ('Docker Image Build') {
+/*stage ('Docker Image Build') {
        app = docker.build("paulsoumi96/devops:${BUILD_NUMBER}")
 }
 
@@ -23,6 +23,6 @@ stage ('Push Docker Image') {
 
 stage('Run Container') {
       sh "docker run -p 8084:8080 -d paulsoumi96/devops"
-}
+}*/
 
 }
